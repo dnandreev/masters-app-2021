@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 
 namespace MastersApp2021.Entities{
 	public partial class Service{
@@ -16,5 +11,7 @@ namespace MastersApp2021.Entities{
 		public Visibility DiscountVisibility => (Discount == 0 || Discount == null) ? Visibility.Collapsed : Visibility.Visible;
 
 		public string BackColor => (Discount == 0 || Discount == null) ? "#ffffe1" : "#d1ffd1";
+
+		public string AdminControlsVisibility => App.CurrentUser.RoleId == 1 ? "Visible" : "Collapsed";
 	}
 }

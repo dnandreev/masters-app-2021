@@ -64,8 +64,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="AddEditPage.xaml.cs">
-      <DependentUpon>AddEditPage.xaml</DependentUpon>
+    <Compile Include="AddEditServicePage.xaml.cs">
+      <DependentUpon>AddEditServicePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Entities\Client.cs">
       <DependentUpon>DataBaseNameModel.tt</DependentUpon>
@@ -106,6 +106,9 @@
     <Compile Include="Entities\ProductSale.cs">
       <DependentUpon>DataBaseNameModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Entities\Role.cs">
+      <DependentUpon>DataBaseNameModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entities\Service.cs">
       <DependentUpon>DataBaseNameModel.tt</DependentUpon>
     </Compile>
@@ -113,13 +116,26 @@
     <Compile Include="Entities\ServicePhoto.cs">
       <DependentUpon>DataBaseNameModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Entities\sysdiagrams.cs">
+      <DependentUpon>DataBaseNameModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entities\Tag.cs">
       <DependentUpon>DataBaseNameModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\User.cs">
+      <DependentUpon>DataBaseNameModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LoginPage.xaml.cs">
+      <DependentUpon>LoginPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="ServicesPage.xaml.cs">
       <DependentUpon>ServicesPage.xaml</DependentUpon>
     </Compile>
-    <Page Include="AddEditPage.xaml">
+    <Page Include="AddEditServicePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LoginPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -182,6 +198,8 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\service_logo.ico" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="Entities\DataBaseNameModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>DataBaseNameModel.edmx</DependentUpon>

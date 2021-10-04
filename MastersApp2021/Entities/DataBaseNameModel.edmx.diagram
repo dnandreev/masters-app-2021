@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="6ef2fac3b9ec495f87049d80837af25e" Name="Diagram1">
+      <Diagram DiagramId="ed417443bcb14e90a55b7017bca4601f" Name="Diagram1">
         <EntityTypeShape EntityType="DataBaseNameModel.Client" Width="1.5" PointX="0.75" PointY="7.375" IsExpanded="true" />
         <EntityTypeShape EntityType="DataBaseNameModel.ClientService" Width="1.5" PointX="3" PointY="9.625" IsExpanded="true" />
         <EntityTypeShape EntityType="DataBaseNameModel.DocumentByService" Width="1.5" PointX="5.25" PointY="10" IsExpanded="true" />
@@ -13,9 +13,12 @@
         <EntityTypeShape EntityType="DataBaseNameModel.Product" Width="1.5" PointX="3" PointY="3.25" IsExpanded="true" />
         <EntityTypeShape EntityType="DataBaseNameModel.ProductPhoto" Width="1.5" PointX="5.25" PointY="4" IsExpanded="true" />
         <EntityTypeShape EntityType="DataBaseNameModel.ProductSale" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataBaseNameModel.Role" Width="1.5" PointX="5.75" PointY="7.375" IsExpanded="true" />
         <EntityTypeShape EntityType="DataBaseNameModel.Service" Width="1.5" PointX="0.75" PointY="16.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DataBaseNameModel.ServicePhoto" Width="1.5" PointX="3" PointY="19.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataBaseNameModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="2.125" IsExpanded="true" />
         <EntityTypeShape EntityType="DataBaseNameModel.Tag" Width="1.5" PointX="3" PointY="16.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataBaseNameModel.User" Width="1.5" PointX="8" PointY="7.375" IsExpanded="true" />
         <AssociationConnector Association="DataBaseNameModel.FK_Client_Gender" ManuallyRouted="false" />
         <AssociationConnector Association="DataBaseNameModel.FK_ClientService_Client" ManuallyRouted="false" />
         <AssociationConnector Association="DataBaseNameModel.FK_ClientService_Service" ManuallyRouted="false" />
@@ -24,6 +27,7 @@
         <AssociationConnector Association="DataBaseNameModel.FK_Product_Manufacturer" ManuallyRouted="false" />
         <AssociationConnector Association="DataBaseNameModel.FK_ProductPhoto_Product" ManuallyRouted="false" />
         <AssociationConnector Association="DataBaseNameModel.FK_ProductSale_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="DataBaseNameModel.FK_User_Role" ManuallyRouted="false" />
         <AssociationConnector Association="DataBaseNameModel.FK_ServicePhoto_Service" ManuallyRouted="false" />
         <AssociationConnector Association="DataBaseNameModel.AttachedProduct" ManuallyRouted="false" />
         <AssociationConnector Association="DataBaseNameModel.TagOfClient" ManuallyRouted="false" />

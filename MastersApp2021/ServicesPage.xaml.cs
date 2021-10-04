@@ -6,6 +6,7 @@ namespace MastersApp2021{
 	public partial class ServicesPage : Page{
 		public ServicesPage(){
 			InitializeComponent();
+			BtnAddService.Visibility = App.CurrentUser.RoleId == 1 ? Visibility.Visible : Visibility.Collapsed;
 			LViewServices.ItemsSource = App.Context.Service.ToList();
 			ComboDiscount.SelectedIndex = 0;
 			ComboSortBy.SelectedIndex = 0;
@@ -37,10 +38,19 @@ namespace MastersApp2021{
 			BlockRecords.Text = $"{services.Count} из {total}";
 		}
 
-		void BtnAddService_Click(object sender, RoutedEventArgs e) { }
+		void BtnAddService_Click(object sender, RoutedEventArgs e) => NavigationService.Navigate(new AddEditServicePage());
 
-		void BtnEdit_Click(object sender, RoutedEventArgs e) { }
+		void BtnEdit_Click(object sender, RoutedEventArgs e) => NavigationService.Navigate(new AddEditServicePage((sender as Button).DataContext as Entities.Service));
 
-		void BtnDelete_Click(object sender, RoutedEventArgs e) { }
+		void BtnDelete_Click(object sender, RoutedEventArgs e){
+			var currentService = (sender as Button).DataContext as Entities.Service;
+			if(MessageBox.Show($"Вы уверены, что хотите удалить услугу: {currentService.Title}?", "Внимание", MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.Yes){
+				App.Context.Service.Remove(currentService);
+				App.Context.SaveChanges();
+				UpdateServices();
+			}
+		}
+
+		void Page_Loaded(object sender, RoutedEventArgs e) => UpdateServices();
 	}
 }
